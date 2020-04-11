@@ -3,18 +3,11 @@
 ## What’s this about?
 This approach may not only protect from wasting advertising money but also enable to profitably scale into untapped audiences. It is important to understand that the goal of this device model segmentation is not to identify the high value devices but rather to create device model segments which can be used in parallel for more detailed targeting and true value bidding.
 
-## Collect device model information
-Commercial model names of devices like for example “SM-G950F” (Samsung Galaxy S8) or “iPhone6,1” are available through many sources. Mobile attribution providers like Appsflyer and Adjust include device models in their raw data reports and popular analytics SDKs like Unity Analytics and Firebase automatically collect this information.
-
 ## Calculate the device value and create segments
 Firstly, why do device models have a different value? The assumption is that there is a correlation between the device model and the average value of the users that owns this device. In practice this is certainly true. Let’s define 3 segments for our device models:
 A — The few devices which belong to high value users.
 B — The middle segment.
 C — The “long tail”: Many devices with a low value per device.
-Let’s assume there are 2 input files which contain users installs and user purchases.
-1. installs.csv 
-2. revenue.csv
-The first step is to merge them together. Then to create a pivot table per device to finally calculate the average revenue per device and bucket this into the 3 segments.
 
 ``` python
 import pandas as pd
@@ -41,8 +34,7 @@ Upload the device segments
 This is the final step to get value out of the device segmentation. Most mobile advertising partners offer self-serve dashboards or APIs where advertisers can upload their device segments. Here are two exemplary script for Facebook Ads and Applovin (other channels have similar features).
 
 Facebook Ads Advanced Targeting API
-Source:
-https://developers.facebook.com/docs/marketing-api/audiences/reference/advanced-targeting/
+Source: https://developers.facebook.com/docs/marketing-api/audiences/reference/advanced-targeting/
 Example Request:
 
 ``` javascript
@@ -64,8 +56,7 @@ curl \
   ```
 
 Applovin Device Model Targeting API
-Source:
-https://growth-support.applovin.com/hc/en-us/articles/115000788668-Device-Model-Targeting-API
+Source: https://growth-support.applovin.com/hc/en-us/articles/115000788668-Device-Model-Targeting-API
 Example Request:
 
 ``` javascript
@@ -80,11 +71,11 @@ Example Response:
 
 Once the device segments are uploaded the campaign can be split into multiple smaller campaigns, each one targeting exactly one device segment. With this campaign setup it is more likely to get a good ROAS on all of these segments as the bid amount will now closer reflect the true value of the audience.
 
+## Collect device model information
+Commercial model names of devices like for example “SM-G950F” (Samsung Galaxy S8) or “iPhone6,1” are available through many sources. Mobile attribution providers like Appsflyer and Adjust include device models in their raw data reports and popular analytics SDKs like Unity Analytics and Firebase automatically collect this information.
+
 ## Pros and Cons
 On the pro side this approach can yield a higher ROAS because the bid amount better reflects the real value of the targeted audience. Bidding high for top devices can lead to a competitive advantage over other advertisers which have a flat bid across all devices. At the same time, the potential scale of campaigns is high because the audience is not limited as device models are not blacklisted.
 However, the advertising products move more into autopilot features like the Google UAC where the advertisers’ choices are limited. Also for Facebook Ads it might work better to not limit Facebooks bidding algorithm but rather let Facebook decide which devices to target at which bid (e.g. by using App Event Optimization).
 In the end the key is to try and learn what works best. That’s the only way to run successful mobile advertising campaigns in the long run.
-
-
-
 
