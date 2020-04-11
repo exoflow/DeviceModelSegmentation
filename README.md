@@ -1,8 +1,5 @@
 # Mobile Device Model Segmentation
 
-## What’s this about?
-This approach may not only protect from wasting advertising money but also enable to profitably scale into untapped audiences. It is important to understand that the goal of this device model segmentation is not to identify the high value devices but rather to create device model segments which can be used in parallel for more detailed targeting and true value bidding.
-
 ## Calculate the device value and create segments
 Firstly, why do device models have a different value? The assumption is that there is a correlation between the device model and the average value of the users that owns this device. In practice this is certainly true. Let’s define 3 segments for our device models:
 A — The few devices which belong to high value users.
