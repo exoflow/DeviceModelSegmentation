@@ -43,7 +43,7 @@ This is the final step to get value out of the device segmentation. Most mobile 
 Facebook Ads Advanced Targeting API
 Example Request:
 
-``` curl
+``` php
 curl \
   -F 'name=My AdSet' \
   -F 'optimization_goal=REACH' \
@@ -61,10 +61,9 @@ curl \
   https://graph.facebook.com/v2.11/act_<AD_ACCOUNT_ID>/adsets
   ```
 Source:
-https://developers.facebook.com/docs/marketing-api/audiences/reference/advanced-targeting/
-Applovin Device Model Targeting API
+https://developers.facebook.com/docs/marketing-api/audiences/reference/advanced-targeting/Applovin Device Model Targeting API
 
-``` curl
+``` python
 Example Request:
 curl -X POST --data-binary @devices.txt "https://api.applovin.com/devices/append?device_list_id=<DEVICE_LIST_ID>&api_key=<API_KEY>"
 Where the contents of the file devices.txt is:
@@ -79,7 +78,7 @@ https://growth-support.applovin.com/hc/en-us/articles/115000788668-Device-Model-
 
 Once the device segments are uploaded you are ready to split your campaign into multiple smaller campaigns, each one targeting exactly one device segment. With this campaign setup it is more likely that you will get a good ROAS on all of these segments as the bid amount will now closer reflect the true value of the audience.
 
-##Pros and Cons
+## Pros and Cons
 On the pro side this approach can yield a higher ROAS because the bid amount better reflects the real value of the targeted audience. Bidding high for your top devices can lead to a competitive advantage over other advertisers which have a flat bid across all devices. At the same time, the potential scale of your campaigns is high because the audience is not limited as device models are not blacklisted.
 However, the advertising products move more into autopilot features like the Google UAC where the advertisers’ choices are limited. Also for Facebook Ads it might work better if you don’t limit Facebooks bidding algorithm but rather let Facebook decide which devices to target at which bid (e.g. by using App Event Optimization).
 In the end the key is to try and learn what works best for your campaigns. That’s the only way to run successful mobile advertising campaigns in the long run.
