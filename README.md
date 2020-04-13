@@ -61,10 +61,16 @@ Example Request:
 ``` javascript
 Example Request:
 curl -X POST --data-binary @devices.txt "https://api.applovin.com/devices/append?device_list_id=<DEVICE_LIST_ID>&api_key=<API_KEY>"
+```
+
 Where the contents of the file devices.txt is:
+``` javascript
 SM-J100H
 HUAWEI Y520-U03
+```
+
 Example Response:
+``` javascript
 { "device_list_id" : “dab2d1297d35592597b0eee016e92baa”, "processed_devices" : 2, "failed_devices" : 0 }
 ```
 
