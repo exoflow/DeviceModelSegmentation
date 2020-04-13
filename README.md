@@ -27,7 +27,9 @@ groupby.sort_values('Revenue per User', ascending = False)
 ```
 
 Thats really all it is. Note that in this example I used the Pandas qcut() function which creates segments of equal size. One could also use segments based on percentiles. 
-Upload the device segments
+
+
+## Upload the device segments via API
 This is the final step to get value out of the device segmentation. Most mobile advertising partners offer self-serve dashboards or APIs where advertisers can upload their device segments. Here are two exemplary script for Facebook Ads and Applovin (other channels have similar features).
 
 Facebook Ads Advanced Targeting API
